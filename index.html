@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esteganografia em Imagens</title>
+    <link rel="stylesheet" href="Frontend/css/styles.css">
+</head>
+<body>
+<main class="container">
+    <h1>Esteganografia em Imagens</h1>
+    <div class="screen-tabs">
+        <button class="screen-tab active" data-screen="encode">Inserir Mensagem</button>
+        <button class="screen-tab" data-screen="decode">Ler Mensagem</button>
+    </div>
+        
+<section class="encode-section active">
+            <h2>Inserir mensagem em imagem</h2>
+            <form id="encode-form" class="steganography-form">
+                <div class="form-group">
+                    <label for="encode-image">Selecione uma imagem (PNG):</label>
+                    <input type="file" id="encode-image" accept=".png" required>
+                    <img id="encode-preview" class="image-preview" src="#" alt="Preview">
+                </div>
+                
+                <div class="form-group">
+                    <label for="secret-message">Mensagem secreta:</label>
+                    <textarea id="secret-message" required placeholder="Digite sua mensagem secreta aqui..."></textarea>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn primary">Codificar Mensagem</button>
+                    <button type="button" id="download-btn" class="btn secondary" disabled>Baixar Imagem</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="decode-section">
+            <h2>Ler mensagem de imagem</h2>
+            <form id="decode-form" class="steganography-form">
+                <div class="form-group">
+                    <label for="decode-image">Selecione uma imagem:</label>
+                    <input type="file" id="decode-image" accept=".png" required>
+                    <img id="decode-preview" class="image-preview" src="#" alt="Preview">
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn primary">Extrair Mensagem</button>
+                </div>
+
+                <div class="form-group hidden" id="result-container">
+                    <label>Mensagem encontrada:</label>
+                    <textarea id="decoded-message" readonly></textarea>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="Frontend/js/steganography.js"></script>
+    <script src="Frontend/js/script.js"></script>
+</body>
+</html>
