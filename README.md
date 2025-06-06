@@ -1,40 +1,87 @@
-# Esteganografia em Imagens
+# 🖼️ Esteganografia em Imagens
 
-Uma aplicação web para ocultar mensagens em imagens usando esteganografia. A aplicação funciona diretamente no navegador, sem necessidade de servidor.
+Projeto de esteganografia que permite esconder e recuperar mensagens secretas em imagens PNG usando a técnica LSB (Least Significant Bit).
 
-## 🌐 Acesse a Aplicação
+## 🌐 Links
 
-Você pode acessar a aplicação em: https://[seu-usuario].github.io/esteganografia-imagens/
+- **GitHub:** [https://github.com/RaulNeto-2810/esteganografia_imagens](https://github.com/RaulNeto-2810/esteganografia_imagens)
+- **Site:** [https://raulneto-2810.github.io/esteganografia_imagens/](https://raulneto-2810.github.io/esteganografia_imagens/)
 
-## 💡 Como Usar
+## 💡 Funcionalidades
 
-1. Para esconder uma mensagem em uma imagem:
-   - Clique em "Selecione uma imagem (PNG)"
-   - Digite sua mensagem secreta
-   - Clique em "Codificar Mensagem"
-   - Use o botão "Baixar Imagem" para salvar a imagem com a mensagem oculta
+### Codificação
+- Seleção de imagem PNG
+- Inserção de mensagem secreta
+- Download da imagem com mensagem oculta
+- Preview da imagem em tempo real
 
-2. Para ler uma mensagem oculta:
-   - Clique em "Selecione uma imagem"
-   - Clique em "Extrair Mensagem"
-   - A mensagem oculta será exibida na caixa de texto abaixo
+### Decodificação
+- Extração da mensagem oculta
+- Suporte a imagens PNG
+- Preview da imagem carregada
 
-## 🔧 Tecnologias Utilizadas
+## 🛠️ Tecnologias
 
+### Frontend
 - HTML5
 - CSS3
-- JavaScript
-- Canvas API
+- JavaScript (Vanilla)
+- Técnica LSB para manipulação de pixels
 
-## 📝 Sobre o Projeto
+### Backend
+- Python
+- Flask
+- Pillow (PIL) para processamento de imagens
 
-Este projeto implementa esteganografia em imagens usando a técnica LSB (Least Significant Bit), que altera o bit menos significativo de cada pixel para armazenar a mensagem. A implementação é feita inteiramente em JavaScript, usando a API Canvas para manipulação de imagens.
+## 📦 Estrutura do Projeto
 
-## 🚀 Como Executar Localmente
-
-1. Clone o repositório:
-```bash
-git clone https://github.com/[seu-usuario]/esteganografia-imagens.git
+```
+├── Frontend/
+│   ├── css/
+│   │   └── styles.css
+│   └── js/
+│       ├── script.js
+│       └── steganography.js
+│
+├── Backend/
+│   ├── esteganografia.py
+│   ├── main.py
+│   └── requirements.txt
+│
+└── index.html
 ```
 
-2. Abra o arquivo `index.html` em seu navegador
+## 🔒 Como Funciona
+
+O projeto utiliza a técnica LSB (Least Significant Bit) para esconder mensagens em imagens:
+
+1. **Codificação:**
+   - Converte a mensagem em binário
+   - Modifica o bit menos significativo de cada canal RGB dos pixels
+   - Adiciona um delimitador especial para marcar o fim da mensagem
+
+2. **Decodificação:**
+   - Extrai os bits menos significativos dos pixels
+   - Procura pelo delimitador para encontrar o fim da mensagem
+   - Converte os bits de volta para texto
+
+## 🚀 Uso
+
+1. Acesse o [site do projeto](https://raulneto-2810.github.io/esteganografia_imagens/)
+2. Para esconder uma mensagem:
+   - Selecione uma imagem PNG
+   - Digite sua mensagem secreta
+   - Clique em "Codificar Mensagem"
+   - Faça o download da imagem resultante
+
+3. Para ler uma mensagem:
+   - Selecione uma imagem que contenha uma mensagem oculta
+   - Clique em "Extrair Mensagem"
+   - A mensagem secreta será exibida na tela
+
+## 📝 Notas
+
+- Use apenas imagens PNG
+- O tamanho da mensagem é limitado pelo tamanho da imagem
+- A qualidade visual da imagem é preservada
+- Não é possível recuperar mensagens de imagens que foram comprimidas ou modificadas
