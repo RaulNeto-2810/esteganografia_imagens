@@ -5,7 +5,7 @@ Projeto de esteganografia que permite esconder e recuperar mensagens secretas em
 ## 🌐 Links
 
 - **GitHub:** [https://github.com/RaulNeto-2810/esteganografia_imagens](https://github.com/RaulNeto-2810/esteganografia_imagens)
-- **Site:** [https://raulneto-2810.github.io/esteganografia_imagens/](https://raulneto-2810.github.io/esteganografia_imagens/)
+- **Site:** [#](#)
 
 ## 💡 Funcionalidades
 
@@ -25,30 +25,30 @@ Projeto de esteganografia que permite esconder e recuperar mensagens secretas em
 ### Frontend
 - HTML5
 - CSS3
-- JavaScript (Vanilla)
+- JavaScript puro
 - Técnica LSB para manipulação de pixels
 
 ### Backend
-- Python
-- Flask
-- Pillow (PIL) para processamento de imagens
+- Python com Flask
+- Biblioteca Pillow (PIL)
 
 ## 📦 Estrutura do Projeto
 
 ```
-├── Frontend/
+/
+├── app/
+│   ├── __init__.py        # Configuração do Flask
+│   └── esteganografia.py  # Lógica de esteganografia e rotas
+├── static/
 │   ├── css/
-│   │   └── styles.css
+│   │   └── styles.css     # Estilos da aplicação
 │   └── js/
-│       ├── script.js
-│       └── steganography.js
-│
-├── Backend/
-│   ├── esteganografia.py
-│   ├── main.py
-│   └── requirements.txt
-│
-└── index.html
+│       └── script.js      # Lógica do frontend
+├── templates/
+│   └── index.html         # Template principal
+├── main.py               # Ponto de entrada da aplicação
+├── requirements.txt      # Dependências Python
+└── vercel.json          # Configuração do Vercel
 ```
 
 ## 🔒 Como Funciona
@@ -67,12 +67,13 @@ O projeto utiliza a técnica LSB (Least Significant Bit) para esconder mensagens
 
 ## 🚀 Uso
 
-1. Acesse o [site do projeto](https://raulneto-2810.github.io/esteganografia_imagens/)
+1. Acesse o [site do projeto](#)
 2. Para esconder uma mensagem:
+   - Clique em "Inserir Mensagem"
    - Selecione uma imagem PNG
    - Digite sua mensagem secreta
    - Clique em "Codificar Mensagem"
-   - Faça o download da imagem resultante
+   - Baixe a imagem resultante
 
 3. Para ler uma mensagem:
    - Selecione uma imagem que contenha uma mensagem oculta

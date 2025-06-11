@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esteganografia em Imagens</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+<main class="container">
+    <h1>Esteganografia em Imagens</h1>
+    <div class="abas-tela">
+        <button class="aba-tela active" data-tela="codificar">Inserir Mensagem</button>
+        <button class="aba-tela" data-tela="decodificar">Ler Mensagem</button>
+    </div>
+        
+    <section class="secao-codificar active">
+        <h2>Inserir mensagem em imagem</h2>
+        <form id="form-codificar" class="formulario-esteganografia">
+            <div class="grupo-form">
+                <label for="imagem-codificar">Selecione uma imagem (PNG):</label>
+                <input type="file" id="imagem-codificar" accept=".png" required>
+                <img id="preview-codificar" class="preview-imagem" src="#" alt="Preview">
+            </div>
+            
+            <div class="grupo-form">
+                <label for="mensagem-secreta">Mensagem secreta:</label>
+                <textarea id="mensagem-secreta" required placeholder="Digite sua mensagem secreta aqui..."></textarea>
+            </div>
+
+            <div class="grupo-botoes">
+                <button type="submit" class="btn primario">Codificar Mensagem</button>
+                <button type="button" id="btn-download" class="btn secundario" disabled>Baixar Imagem</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="secao-decodificar">
+        <h2>Ler mensagem de imagem</h2>
+        <form id="form-decodificar" class="formulario-esteganografia">
+            <div class="grupo-form">
+                <label for="imagem-decodificar">Selecione uma imagem:</label>
+                <input type="file" id="imagem-decodificar" accept=".png" required>
+                <img id="preview-decodificar" class="preview-imagem" src="#" alt="Preview">
+            </div>
+
+            <div class="grupo-botoes">
+                <button type="submit" class="btn primario">Extrair Mensagem</button>
+            </div>
+
+            <div class="grupo-form oculto" id="container-resultado">
+                <label>Mensagem encontrada:</label>
+                <textarea id="mensagem-decodificada" readonly></textarea>
+            </div>
+        </form>
+    </section>
+</main>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

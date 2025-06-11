@@ -16,14 +16,14 @@ body {
   margin: 0 auto;
 }
 
-.screen-tabs {
+.abas-tela {
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
   justify-content: center;
 }
 
-.screen-tab {
+.aba-tela {
   padding: 0.8rem 2rem;
   border: 2px solid #3c6e71;
   border-radius: 4px;
@@ -34,23 +34,23 @@ body {
   transition: all 0.3s ease;
 }
 
-.screen-tab:hover {
+.aba-tela:hover {
   background-color: #3c6e71;
   color: #ffffff;
 }
 
-.screen-tab.active {
+.aba-tela.active {
   background-color: #3c6e71;
   color: #ffffff;
 }
 
-.encode-section,
-.decode-section {
+.secao-codificar,
+.secao-decodificar {
   display: none;
 }
 
-.encode-section.active,
-.decode-section.active {
+.secao-codificar.active,
+.secao-decodificar.active {
   display: block;
 }
 
@@ -74,13 +74,13 @@ section {
   color: #ffffff;
 }
 
-.steganography-form {
+.formulario-esteganografia {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.form-group {
+.grupo-form {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -117,7 +117,7 @@ textarea:focus {
   border-color: #3c6e71;
 }
 
-.image-preview {
+.preview-imagem {
   max-width: 100%;
   height: auto;
   object-fit: contain;
@@ -127,7 +127,7 @@ textarea:focus {
   display: none;
 }
 
-.button-group {
+.grupo-botoes {
   display: flex;
   gap: 1rem;
   justify-content: center;
@@ -143,18 +143,18 @@ textarea:focus {
   transition: all 0.3s ease;
 }
 
-.btn.primary {
+.btn.primario {
   background-color: #353535;
   color: #ffffff;
 }
 
-.btn.secondary {
+.btn.secundario {
   background-color: #ffffff;
   color: #353535;
   border: 2px solid #353535;
 }
 
-.btn.secondary:not(:disabled) {
+.btn.secundario:not(:disabled) {
   background-color: #353535;
   color: #ffffff;
   border: none;
@@ -173,11 +173,11 @@ textarea:focus {
   border: none;
 }
 
-.hidden {
+.oculto {
   display: none;
 }
 
-#decoded-message {
+#mensagem-decodificada {
   background-color: #ffffff;
   color: #353535;
 }
@@ -191,7 +191,7 @@ textarea:focus {
     padding: 1rem;
   }
 
-  .button-group {
+  .grupo-botoes {
     flex-direction: column;
   }
 
